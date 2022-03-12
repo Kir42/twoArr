@@ -5,16 +5,13 @@ import ru.vsu.cs.util.ArrayUtils;
 
 import java.io.FileNotFoundException;
 import java.lang.String;
-import java.util.Scanner;
-import java.io.File;
-import java.util.ConcurrentModificationException;
 
 public class twoArr {
 
     public static void main(String[] args) throws FileNotFoundException {
 
 
-        int[][] array =  ArrayUtils.readIntArray2FromFile("test2");
+        int[][] array =  ArrayUtils.readIntArray2FromFile("input.txt");
 
         int[][] newArr = new int[array.length][array[0].length];
         int counter = 0;
@@ -75,7 +72,7 @@ public class twoArr {
                 System.out.println(newArr[i][j]);
             }
         }
-        ArrayUtils.writeArrayToFile("test2",newArr,"");
+        ArrayUtils.writeArrayToFile("output.txt",newArr,"");
     }
 }
 
